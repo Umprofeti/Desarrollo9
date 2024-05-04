@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "typescript": "^5.4.5"
+  }
+}
