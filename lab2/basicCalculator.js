@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let userInput1 = process.argv[2];
 let userInput2 = process.argv[3];
 let userOperator = process.argv[4];

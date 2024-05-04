@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let userNum = process.argv[2];
 const tablaMultiplicar = (userNum) => {
     let numInt = parseInt(userNum);

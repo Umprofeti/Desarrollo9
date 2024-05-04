@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let factorialNum = process.argv[2];
 const factorial = (userInput) => {
     let num = parseInt(userInput);
