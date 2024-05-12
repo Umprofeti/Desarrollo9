@@ -1,0 +1,18 @@
+<%- include("./template/header", {titulo:"Agregar"})%>
+<header>
+    <%- include("./template/navbar")%>
+</header>
+
+ <div class="container">
+    <h1>Agregar</h1>
+ </div>
+
+ <form action="/procesar" method="POST">
+    <input type="text" name="id"  readonly>
+    <input type="text" name="nombre" >
+    <input type="text" name="usuario" >
+    <input type="text" name="correo" >
+    <input type="submit" value="Enviar">
+ </form>
+
+<%- include("./template/footer")%>
