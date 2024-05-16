@@ -2,8 +2,13 @@
 require("dotenv").config()
 const express = require("express")
 const app = express()
-const {usuarios} = require("./models/usuarios")
 const bodyParser = require('body-parser')
+
+// Rutas
+const agregar = require("./routes/agregar")
+const ver = require("./routes/ver")
+const procesar = require("./routes/procesar")
+const listado = require("./routes/listado")
 
 //Configuraciones
 const PORT = process.env.PORT || 9000
@@ -11,25 +16,15 @@ const PORT = process.env.PORT || 9000
 app.set("view engine", 'ejs')
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended: true}))
+
 //Rutas
-app.get("/agregar", (req, res) => {
+app.use("/agregar", agregar)
 
-    res.render("agregar")
+app.use("/listado", listado)
 
-})
+app.use("/ver", ver)
 
-app.get("/listado", (req, res) => {
-
-    res.render("listado", {usuarios})
-
-})
-
-app.get("/ver/:id", (req, res) => {
-    let {id} = req.params
-    const userInfo = usuarios.find(usuarios=> usuarios.id==id)
-    res.render("ver", {userInfo})
-
-})
+app.use("/procesar", procesar)
 
 app.get("/", (req, res)=> {
 
