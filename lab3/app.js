@@ -31,6 +31,11 @@ app.get("/", (req, res)=> {
     res.render("index")
 
 })
+
+app.get("*", (req, res)=> {
+    res.render("404")
+    
+})
 //Levantar puerto
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`)
