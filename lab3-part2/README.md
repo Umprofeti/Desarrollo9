@@ -7,10 +7,10 @@
         * Hacer componentes las partes que más se repitan
     
 * Detalles del evento <strong>Ronaldo</strong>
-* Formulario de registro al evento <n>Ronaldo</n>
+* Formulario de registro al evento <strong>Ronaldo</strong>
 
-* Sistema de login <n>Jonathan</n>
-* Agregar eventos, eliminarlos y actualizarlos <n>Jonathan<n>
-* Agregar Comentarios <n>Daniela<n>
-* Error 404 <n>Daniela<n>
+* Sistema de login <strong>Jonathan</strong>
+* Agregar eventos, eliminarlos y actualizarlos <strong>Jonathan</strong>
+* Agregar Comentarios <strong>Daniela</strong>
+* Error 404 <strong>Daniela</strong>
 
