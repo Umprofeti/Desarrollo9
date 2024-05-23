@@ -70,6 +70,7 @@ CSS STRUCTURE:
     - Logo
     - Header Menu
     - Nav Sidebar
+    - Scrollbar in webkit browsers
   7.3 Billboard
   7.4 Icon Box Section
   7.5 Categories Section
@@ -1677,6 +1678,34 @@ header#header .header-wrap {
 .right-block .user-items form.search-form {
   width: 120px;
   align-items: center;
+}
+
+/* - Video Header */
+
+.video-banner{
+  width: 100%;
+  height: auto;
+}
+
+/* - Scrollbar webkit browsers */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); 
 }
 
 /* - Main Logo

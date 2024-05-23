@@ -19,18 +19,12 @@ res.render("index")
 app.use("/public",express.static(__dirname+"/views/public"))
 
 
-
-
-
-
 app.get("/eventos",(req,res)=>{
-    res.render("eventos")
-    
-    })
+    res.render("eventos")    
+})
 
 //levantar puerto
 app.listen(puerto,()=>{
- console.log(`puerto levantado ${puerto}`)
-
+ console.log(`Servidor levantado en el puerto:  http://localhost:${puerto}/`)
 
 })
