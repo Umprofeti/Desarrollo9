@@ -11,6 +11,10 @@ function initRoutes() {
         res.render("eventos")
     })
 
+    router.get("/formulario", (req, res) => {
+        res.render("formulario")
+    })
+
     return router;
 }
 

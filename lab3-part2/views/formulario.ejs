@@ -1,0 +1,21 @@
+
+    <%- include("./template/header")%>
+    <%- include("./template/navbar")%>
+    <div class="video-background">
+        <video src="https://videos.pexels.com/video-files/7565817/7565817-hd_2048_1080_25fps.mp4" class="video-banner" autoplay loop muted></video>
+    </div>
+    <script src="../views/public/js/validaciones.js"></script>
+    <div class="wrapper">
+        <div class="title"></div>
+        <form class="form">
+            <input type="text" class="name entry" placeholder="Your Name"/>
+            <input type="text" class="email entry" placeholder="Email"/>
+            <input type="number" class="number" placeholder="Number"/>
+            <button class="submit entry" onclick="validateAndSubmit()">Submit</button>
+        </form>
+        <div class="shadow"></div>
+    </div>
+    
+    
+
+    <%- include("./template/footer")%>
