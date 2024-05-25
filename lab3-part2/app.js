@@ -5,7 +5,6 @@ const bodyParser = require("body-parser")
 const app = express()
 
 
-
 // configuraciones 
 const puerto = process.env.puerto || 54112
 app.set("view engine",'ejs')
@@ -15,6 +14,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //rutas 
 app.use("/", initRoutes)
+
+
 
 //levantar puerto
 app.listen(puerto,()=>{
