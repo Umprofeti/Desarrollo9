@@ -1,5 +1,9 @@
 const express = require("express")
 const router = express.Router()
+const eventos = require("../models/eventos")
+
+/* Controllers */
+const agregarRegistro = require("../controllers/agregarRegistro");
 
 const comments = []; 
 
@@ -11,17 +15,33 @@ function initRoutes() {
     })
 
     router.get("/eventos", (req, res) => {
-        res.render("eventos")
+        res.render("eventos", {eventos})
     })
 
-    router.get("/formulario", (req, res) => {
-        res.render("formulario")
+    router.get("/evento/:id", (req, res) => {
+        let id =  req.params.id
+
+        let evento  = eventos.find(ev => ev.id == id)
+
+        res.render("evento", {evento})
+
+    })
+
+    router.get("/formulario/:id", (req, res) => {
+
+        let id =  req.params.id
+
+        let evento  = eventos.find(ev => ev.id == id)
+
+        res.render("formulario", {id: evento.id})
     })
 
  
-    router.get("/comentarios", (req, res) => {
-        res.render("comentarios");
-    });
+    router.post("/procesarRegistro/:id", (req, res) => {
+        let id =  req.params.id
+
+    })
+
 
     router.post("/comentarios", (req, res) => {
         const { nombre, comentario } = req.body;

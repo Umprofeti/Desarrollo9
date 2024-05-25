@@ -3198,6 +3198,7 @@ h3.post-title {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s;
+  transform-origin: center; /* Asegura que el escalado sea desde el centro */
 }
 
 .card:hover {
@@ -3260,6 +3261,11 @@ body, html {
   transform: translate(-50%, -50%);
   background-size: cover;
   z-index: -1;
+}
+
+.video-banner-hero{
+  width: 100%;
+  height: auto;
 }
 
 .content {
@@ -3409,3 +3415,4 @@ h1, p {
     width: 50%;
   }
 }
+
