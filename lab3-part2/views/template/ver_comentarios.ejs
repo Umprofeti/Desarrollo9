@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <button id="showCommentsBtn" class="btn btn-secondary">Mostrar comentarios</button>
+        </div>
+    </div>
+    <div class="row mt-3" id="commentsSection" style="display: none;">
+        <div class="container">
+           <% comentarios.forEach(function(comentario) { %>
+                <div class="row product-item position-relative mb-3" style="margin: 10px 0;">
+                    <div class="col-12">
+                        <div class="d-flex" style="border: 1px solid #ccc; border-radius: 50px; padding: 15px; gap: 15px;">
+                            <div class="p-2">
+                                <img src="https://cdn-icons-png.freepik.com/512/9706/9706583.png" alt="Icono de comentario" class="comment-icon img-fluid" style="width: 70px; height: 70px;">
+                            </div>
+                            <div class="p-2">
+                                <h3 class="card-title mt-0 mb-1">
+                                    <%= comentario.userEmail %>
+                                </h3>
+                                <p class="card-description mb-0">
+                                    <%= comentario.comentario %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>

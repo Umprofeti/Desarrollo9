@@ -46,6 +46,7 @@ let eventos = [
         ], // Arreglo de usuarios el cual se han suscrito al evento contiene su información
         comentarios: [
             {
+                eventId: 1,
                 id: 1, // INT Refleja el ID del comentario
                 nombre: "Miguel angel lopez",
                 userEmail: "pepito@pepito.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
@@ -70,6 +71,7 @@ let eventos = [
         ], // Arreglo de usuarios el cual se han suscrito al evento contiene su información
         comentarios: [
             {
+                eventId: 2,
                 id: 1, // INT Refleja el ID del comentario
                 nombre: "Miguel angel lopez",
                 userEmail: "pepito@pepito.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
@@ -86,6 +88,7 @@ let eventos = [
         plazas: 100, // -> INT Cantidad de plazas disponibles, Cuando las plazas se acaben mostrar agotados en el front
         usuariosEventos: [  
             {
+              
                 id: 1, //-> Identificador del usuario al registrarse en el evento
                 userEmail: "", //-> Correo electrónico del usuario
                 telefono: "", //-> número de telefono del usuario
@@ -94,9 +97,16 @@ let eventos = [
         ], // Arreglo de usuarios el cual se han suscrito al evento contiene su información
         comentarios: [
             {
+                eventId: 3,
                 id: 1, // INT Refleja el ID del comentario
-                userEmail: "pepito@pepito.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
-                comentario: "Esto es un comentario" // Comentario del usuario
+                userEmail: "pepito@uuuuu.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
+                comentario: "Esto es un comentario, evento tres" // Comentario del usuario
+            }
+            ,{
+                eventId: 3,
+                id: 2, // INT Refleja el ID del comentario
+                userEmail: "ejemplo444@uuuuu.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
+                comentario: "Esto es un segundo comentario, evento tres" // Comentario del usuario
             }
         ] // Arreglo de comentarios relacionado al evento
     }
