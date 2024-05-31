@@ -4,8 +4,8 @@ const eventos = require("../models/eventos")
 
 /* Controllers */
 const agregarRegistro = require("../controllers/agregarRegistro");
+const agregarComentario = require("../controllers/agregarComentario");
 
-const comments = []; 
 
 
 function initRoutes() {
@@ -43,14 +43,20 @@ function initRoutes() {
     })
 
 
-    router.post("/comentarios", (req, res) => {
-        const { nombre, comentario } = req.body;
-        comments.push({ nombre, comentario });
-        res.redirect("/comentarios");
+    router.post("/comentarios/:id", (req, res) => {
+        let id =  req.params.id
+        const { nombre, comentario:comentarioForm, email } = req.body;
+        let comentario = {
+            nombre,
+            email,
+            comentario:comentarioForm
+        }
+        agregarComentario(comentario, id)
+        res.redirect(`/evento/${id}`)
     });
 
 
-    router.use((req, res, next) => {
+    router.use((req, res) => {
         res.status(404).render('404', { titulo: "Página no encontrada" });
     });
 

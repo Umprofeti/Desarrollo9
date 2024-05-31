@@ -24,8 +24,6 @@
         ] // Arreglo de comentarios relacionado al evento
     }
 
-    <%= evento.id%>
-
 */
 
 
@@ -49,6 +47,7 @@ let eventos = [
         comentarios: [
             {
                 id: 1, // INT Refleja el ID del comentario
+                nombre: "Miguel angel lopez",
                 userEmail: "pepito@pepito.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
                 comentario: "Esto es un comentario" // Comentario del usuario
             }
@@ -72,6 +71,7 @@ let eventos = [
         comentarios: [
             {
                 id: 1, // INT Refleja el ID del comentario
+                nombre: "Miguel angel lopez",
                 userEmail: "pepito@pepito.com", // INT refleja el Correo electrónico del usuario asociado al comentario,
                 comentario: "Esto es un comentario" // Comentario del usuario
             }

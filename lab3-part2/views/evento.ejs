@@ -3,16 +3,16 @@
 
 <!-- URL registrar: /formulario/:id -->
 <br> <br> <br><br> <br> <br>
-<div class="container-fluid">
-    <div class="row 4 product-item position-relative">
+<section class="container-fluid">
+    <div class="row product-item justify-content-center d-flex">
         <div class="col-4 image-holder">
           <img
             src="<%= evento.imagen %>"
             alt="Imagen de <%= evento.nombre %>"
-            class="product-image"
+            class="product-image img-fluid rounded"
           />
         </div>
-        <div class="col-8 "> 
+        <div class="col-4"> 
             <div class="container d-flex flex-column align-items-left">
                 <div class="row">
                     <h3 class="card-title"><%= evento.nombre %></h3>
@@ -29,9 +29,20 @@
                 </div>
             </div>
         </div>
-      </div>
-</div>
-
+    </div>
+</section>
+<!-- Sección para mostrar comentarios -->
+<section class="container-fluid pt-4 mt-5">
+    <div class="row">
+        <h3 class="text-center">Comentarios del evento</h3>
+    </div>
+    <div class="row">
+        <% evento.comentarios.forEach(comentario => {%>
+            <%- include("./template/comentario", {comentario})%>
+         <% })%>
+    </div>
+</section>
+<!-- Sección de agregar comentarios -->
 <section>
     <%- include("./template/comentarios")%>
 </section>

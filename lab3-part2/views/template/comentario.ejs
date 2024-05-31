@@ -1,0 +1,26 @@
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <span class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        <%= comentario.nombre %> | 
+        <%= comentario.userEmail %>
+      </button>
+    </span>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse show"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <%= comentario.comentario%>
+      </div>
+    </div>
+  </div>
+</div>
