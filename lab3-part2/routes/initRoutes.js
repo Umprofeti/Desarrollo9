@@ -43,11 +43,7 @@ function initRoutes() {
        
     });
 
-    router.post("/comentarios/:id", (req, res) => {
-        let id =  req.params.id
-
-    })
-
+ 
 
     router.post("/comentarios/:id", (req, res) => {
         let id =  req.params.id

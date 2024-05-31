@@ -1,85 +1,56 @@
 <%- include("./template/header")%>
     <%- include("./template/navbar")%>
+        <br><br><br><br><br>
+        <section>
+            <div class="container">
+                <div class="row 5 product-item position-relative">
+                    <div class="col-5 image-holder">
+                        <img src="<%= evento.imagen %>" alt="Imagen de <%= evento.nombre %>" class="product-image" />
 
-<<<<<<< Updated upstream
-<!-- URL registrar: /formulario/:id -->
-<br> <br> <br><br> <br> <br>
-<section class="container-fluid">
-    <div class="row product-item justify-content-center d-flex">
-        <div class="col-4 image-holder">
-          <img
-            src="<%= evento.imagen %>"
-            alt="Imagen de <%= evento.nombre %>"
-            class="product-image img-fluid rounded"
-          />
-        </div>
-        <div class="col-4"> 
-            <div class="container d-flex flex-column align-items-left">
-                <div class="row">
-                    <h3 class="card-title"><%= evento.nombre %></h3>
-                    <p class="card-description"><%= evento.detalle %></p>
-                    <p class="card-description"><%= evento.Fecha %></p>
-                    <p class="card-description"><%= evento.plazas %></p>
-=======
-        <!-- URL registrar: /formulario/:id -->
-        <br> <br> <br><br> <br> <br>
-        <div class="container">
-            <div class="row 5 product-item position-relative">
-                <div class="col-5 image-holder">
-                    <img src="<%= evento.imagen %>" alt="Imagen de <%= evento.nombre %>" class="product-image" />
->>>>>>> Stashed changes
-                </div>
-                <div class="col-7 ">
-                    <div class="container d-flex flex-column align-items-left">
-                        <div class="row">
-                            <h3 class="card-title">
-                                <%= evento.nombre %>
-                            </h3>
-                            <p class="card-description">
-                                <%= evento.detalle %>
-                            </p>
-                            <p class="card-description">Fecha: <%= evento.Fecha %>
-                            </p>
-                            <p class="card-description">Plazas: <%= evento.plazas %>
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <a href="/formulario/<%= evento.id %>">
-                                    <button type="submit" class="btn btn-primary">Regístrate</button>
-                                </a>
+                    </div>
+                    <div class="col-7 ">
+                        <div class="container d-flex flex-column align-items-left">
+                            <div class="row">
+                                <h3 class="card-title">
+                                    <%= evento.nombre %>
+                                </h3>
+                                <p class="card-description">
+                                    <%= evento.detalle %>
+                                </p>
+                                <p class="card-description">Fecha: <%= evento.Fecha %>
+                                </p>
+                                <p class="card-description">Plazas: <%= evento.plazas %>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a href="/formulario/<%= evento.id %>">
+                                        <button type="submit" class="btn btn-primary">Regístrate</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-<<<<<<< Updated upstream
-    </div>
-</section>
-<!-- Sección para mostrar comentarios -->
-<section class="container-fluid pt-4 mt-5">
-    <div class="row">
-        <h3 class="text-center">Comentarios del evento</h3>
-    </div>
-    <div class="row">
-        <% evento.comentarios.forEach(comentario => {%>
-            <%- include("./template/comentario", {comentario})%>
-         <% })%>
-    </div>
-</section>
-<!-- Sección de agregar comentarios -->
-<section>
-    <%- include("./template/comentarios")%>
-</section>
-=======
-        <section>
-            <%- include("./template/ver_comentarios", { comentarios: evento.comentarios }) %>
 
+            </div>
         </section>
+        <!-- Sección para mostrar comentarios -->
+        <section class="container-fluid pt-4 mt-5">
+            <div class="row">
+                <h3 class="text-center">Comentarios del evento</h3>
+            </div>
+            <div class="row">
+                <%- include("./template/ver_comentarios", { comentarios: evento.comentarios }) %>
+            </div>
+        </section>
+
+
+
         <section>
-            <%- include("./template/comentarios")%>
+            <%- include("./template/comentarios",{evento})%>
         </section>
->>>>>>> Stashed changes
+
 
         <%- include("./template/footer")%>
