@@ -1,0 +1,32 @@
+<%- include("./template/header", {titulo:"Listado"})%>
+<header>
+    <%- include("./template/navbar")%>
+</header>
+
+ <div class="container">
+    <h1>Listado</h1>
+ </div>
+
+ <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">USUARIO</th>
+            <th scope="col">CORREO</th>
+        </tr>
+    </thead>
+    <tbody class="">
+        <% usuarios.forEach(usuario =>{ %>
+        <tr>
+            <td><%= usuario.id%></td>
+            <td><%= usuario.nombre%></td>
+            <td><%= usuario.usuario%></td>
+            <td><%= usuario.correo%></td>
+            <td><a href="/ver/<%= usuario.id%>"><button type="button" class="btn btn-dark">Ver</button></a></td>
+        </tr>
+        <% })%>
+    </tbody>
+ </table>
+
+<%- include("./template/footer")%>
