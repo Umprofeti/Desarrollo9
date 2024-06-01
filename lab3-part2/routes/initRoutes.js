@@ -10,7 +10,7 @@ const agregarComentario = require("../controllers/agregarComentario");
 
 function initRoutes() {
     router.get("/", (req, res) => {
-        res.render("index");
+        res.render("index",{eventos});
     });
 
     router.get("/eventos", (req, res) => {

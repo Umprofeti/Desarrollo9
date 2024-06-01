@@ -2085,6 +2085,8 @@ a.text-black.text-uppercase.dropdown-item:hover {
 .product-store .product-item {
   margin-bottom: 30px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 
 .product-item .cart-concern {
@@ -3415,4 +3417,6 @@ h1, p {
     width: 50%;
   }
 }
+
+
 

@@ -2,6 +2,7 @@
 
 
 
+<link rel="stylesheet" href="./public/css/estilos.css">
 <%- include("./template/navbar")%>
 <div class="video-background">
         <video src="https://videos.pexels.com/video-files/7565817/7565817-hd_2048_1080_25fps.mp4" class="video-banner" autoplay loop muted></video>
@@ -16,7 +17,7 @@
 
       <link rel="stylesheet" href=".css">
     </div>
-    <div class="grid">
+    <div class="grid-container">
       <% eventos.forEach(evento => { %>
         <%- include("./template/card_events", {evento})%>
       <%})%>

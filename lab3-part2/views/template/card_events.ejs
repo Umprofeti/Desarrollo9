@@ -1,22 +1,21 @@
 <div class="swiper-slide">
-  <div class="product-item position-relative">
-    <div class="image-holder">
-      <img
-        src="<%= evento.imagen %>"
-        alt="product-item"
-        class="product-image"
-      />
-    </div>
-    <div class="cart-concern">
-      <div class="card">
-        <a href="/evento/<%= evento.id %>">
-          <div class="card-content">
-            <h3 class="card-title"><%= evento.name%></h3>
-            <p class="card-description"><%= evento.detalle%></p>
-            <p class="card-description"><%= evento.Fecha%></p>
-            <p class="card-description"><%= evento.plazas%></p>
-          </div>
-        </a>
+  
+  <div class="grid-container">
+    <div class="product-item position-relative grid-item">
+      <div class="image-holder">
+        <img src="<%= evento.imagen %>" alt="product-item" class="product-image" style="max-height: 300px; width: auto; aspect-ratio: 1.5; border-radius: 10px;">
+      </div>
+      <div class="cart-concern">
+        <div class="card">
+          <a href="/evento/<%= evento.id %>">
+            <div class="card-content">
+              <h3 class="card-title"><%= evento.nombre%></h3>
+              <p class="card-description"><%= evento.detalle%></p>
+              <p class="card-description"><%= evento.Fecha%></p>
+              <p class="card-description"><%= evento.plazas%></p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

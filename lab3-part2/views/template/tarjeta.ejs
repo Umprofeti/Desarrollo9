@@ -1,0 +1,13 @@
+
+<div class="card" style="height: auto; border-radius: 10px;max-height: 600px;">
+
+    <img src="<%= evento.imagen %>" class="card-img-top" style="max-height: 300px; width: auto; aspect-ratio: 1.5; " >
+    <div class="card-body">
+      <h2 class="card-title"><%= evento.nombre%></h2>
+      <p class="card-description"><%= evento.detalle%></p>
+      <div class="d-flex justify-content-center" >
+        <a href="/evento/<%= evento.id %>" class="btn btn-primary">Ver</a>
+      </div>
+     
+    </div>
+  </div>
