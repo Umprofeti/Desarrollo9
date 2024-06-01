@@ -55,7 +55,12 @@ function initRoutes() {
     })
 
     router.get("/login", (req, res) => {
-        res.render("login", )
+        if(req.cookies.token){
+            res.redirect("/dashboard")
+        }
+        if(!req.cookies.token){
+            res.render("login")
+        }
     })
 
     router.post("/userLogin", (req, res) => {
