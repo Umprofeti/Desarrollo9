@@ -4,8 +4,17 @@ const agregarRegistro = (eventID, registro) => {
 
     let evento = eventos.find(ev => ev.id == eventID)
 
-   if(evento !== undefined){
-        evento.usuariosEventos.push(registro)
+    evento.plazas = evento.plazas - 1
+
+    let newRegister = {
+        id: (evento.usuariosEventos.length + 1),
+        userName: registro.nombre,
+        userEmail: registro.userEmail,
+        telefono: registro.telefono
+    }
+
+   if(evento !== undefined && evento.plazas > 0){
+        evento.usuariosEventos.push(newRegister)
     };
 
 }

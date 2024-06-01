@@ -1,22 +1,25 @@
 
     <%- include("./template/header")%>
+    <link rel="stylesheet" href="/public/estilos.css">
     <%- include("./template/navbar")%>
-    <div class="video-background">
-        <video src="https://videos.pexels.com/video-files/7565817/7565817-hd_2048_1080_25fps.mp4" class="video-banner" autoplay loop muted></video>
-    </div>
-    <script src="../views/public/js/validaciones.js"></script>
-    <div class="wrapper">
-        <div class="title"></div>
-        <form class="form">
-        
-            <input type="text" name="nombre" class="name entry" placeholder="Your Name"/>
-            <input type="text" name="email"class="email entry" placeholder="Email"/>
-            <input type="number" name="number"class="number" placeholder="Number"/>
-            <button class="submit entry" onclick="validateAndSubmit()">Submit</button>
-        </form>
-        <div class="shadow"></div>
-    </div>
+    <script src="/public/js/validaciones.js"></script>
+   <section>
+        <div class="video-background">
+            <video src="https://videos.pexels.com/video-files/7565817/7565817-hd_2048_1080_25fps.mp4" class="video-banner" autoplay loop muted></video>
+        </div>
+        <div class="wrapper">
+            <div class="title"></div>
+            <form class="form" action="/procesarFormulario/<%= id%>" method="POST">            
+                <input type="text" name="nombre" class="name entry placeholder" placeholder="Your Name"/>
+                <input type="text" name="email"class="email entry placeholder" placeholder="Email"/>
+                <input type="phone" name="number"class="number placeholder" placeholder="Number"/>
+                <button class="submit entry" onclick="validateAndSubmit()">Submit</button>
+            </form>
+            <div class="shadow"></div>
+        </div>
+   </section>
     
     
-
-    <%- include("./template/footer")%>
+    
+    
+<%- include("./template/footer")%>

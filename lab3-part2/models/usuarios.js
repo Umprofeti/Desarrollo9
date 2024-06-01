@@ -6,10 +6,9 @@
         password: "", // String con la contraseña cifrada
         JWT_TOKEN: "", // Token de autenticación del usuario cuando se logea. Tiene una duración de 1 hora
         email: "correo@correo.com", // Email del usuario al cual se registra
-        rol: 0, // 0 Siendo admin
     }
 */
 
-const usuarios = [];
+let usuarios = [];
 
 module.exports = usuarios;

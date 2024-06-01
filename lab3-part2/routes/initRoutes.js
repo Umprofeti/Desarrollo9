@@ -5,8 +5,11 @@ const eventos = require("../models/eventos")
 /* Controllers */
 const agregarRegistro = require("../controllers/agregarRegistro");
 const agregarComentario = require("../controllers/agregarComentario");
+const verifyUser = require("../controllers/verifyUser");
 
 
+/* Middleware */
+const autenticate = require("../middleware/autenticate")
 
 function initRoutes() {
     router.get("/", (req, res) => {
@@ -38,12 +41,46 @@ function initRoutes() {
         res.render("formulario", { id: evento.id });
     });
 
-    router.post("/procesarRegistro/:id", (req, res) => {
-        let id = req.params.id;
-       
-    });
+    router.post("/procesarFormulario/:id", (req, res) => {
+        let id =  req.params.id
+        let registro = {
+            nombre: req.body.nombre,
+            userEmail: req.body.email,
+            telefono: req.body.number
+        }
 
- 
+        agregarRegistro(id, registro)
+
+        res.redirect(`/evento/${id}`)
+    })
+
+    router.get("/login", (req, res) => {
+        res.render("login", )
+    })
+
+    router.post("/userLogin", (req, res) => {
+
+        let JWT = verifyUser(req.body.username, req.body.password)
+
+        if(JWT != undefined ){
+            res.cookie('token', JWT, { httpOnly: true });
+            res.redirect("/dashboard")
+        }else{
+            res.redirect("/login")
+        }
+    })
+
+    router.get("/dashboard/", autenticate ,(req, res) => {
+        res.render("dashboard", {eventos})
+    })
+
+    router.get("/dashboard/event/:id", autenticate, (req, res) => {
+        let id =  req.params.id
+
+        let currentEvent = eventos.find(ev => ev.id == id)
+
+        res.render("details-event", {evento: currentEvent})
+    })
 
     router.post("/comentarios/:id", (req, res) => {
         let id =  req.params.id

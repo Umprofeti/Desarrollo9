@@ -1,0 +1,34 @@
+<%- include("./template/header")%>
+<link rel="stylesheet" href="/public/estilos.css">
+<%- include("./template/navbar")%>
+<br><br><br><br><br><br>
+<section class="container">
+    <div class="row">
+        <h3 class="text-center">Usuarios registrados en el evento: <%=evento.nombre%></h3>
+    </div>
+    <div class="row">
+        <table class="table table-light table-striped table-hover table-bordered table-sm table-responsive-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Nombre de usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(evento.usuariosEventos <= 0){ %>
+                    <p>No hay Usuarios registrados</p>
+                <%}else { %>
+                <% evento.usuariosEventos.forEach(usuario => { %>
+                    <tr>
+                        <th><%= usuario.userEmail%></th>
+                        <td><%= usuario.telefono%></td>
+                        <td><%= usuario.userName%></td>
+                    </tr>
+                <% })}%>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<%- include("./template/Footer")%>

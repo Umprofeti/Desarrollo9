@@ -1,0 +1,19 @@
+<%- include("./template/header")%>
+<link rel="stylesheet" href="/public/estilos.css">
+<%- include("./template/navbar")%>
+
+<section>
+    <div class="video-background">
+        <video src="https://videos.pexels.com/video-files/7565817/7565817-hd_2048_1080_25fps.mp4" class="video-banner" autoplay loop muted></video>
+    </div>
+    <div class="wrapper">
+        <form class="form" action="/userLogin" method="POST">            
+            <input type="text" name="username" class="name entry placeholder" placeholder="Username"/>
+            <input type="password" name="password"class="email entry placeholder" placeholder="password"/>
+            <button type="submit" class="submit entry">Submit</button>
+        </form>
+        <div class="shadow"></div>
+       
+    </div>
+</section>
+<%- include("./template/footer")%>

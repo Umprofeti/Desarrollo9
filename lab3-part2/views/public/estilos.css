@@ -1,0 +1,7 @@
+.bg-accent-light {
+    background-color: #e4c4c4 !important;
+}
+
+.placeholder::placeholder{
+    color: #000;
+}
