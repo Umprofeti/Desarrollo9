@@ -1,0 +1,31 @@
+<%- include("./template/header", {titulo:"Agregar"})%>
+<header>
+    <%- include("./template/navbar")%>
+</header>
+
+<div class="container">
+    <div class="row">
+        <h1>Ver Registro</h1>
+        <form action="/guardar/<%= dato._id%>" method="POST">
+            <div class="mb-3">
+                <label for="_id">ID</label>
+                <input type="text" name="_id" id="_id" readonly disabled value="<%= dato._id%>">
+            </div>
+            <div class="mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" value="<%= dato.nombre%>">
+            </div>
+            <div class="mb-3">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" value="<%= dato.usuario%>">
+            </div>
+            <div class="mb-3">
+                <label for="correo">Correo</label>
+                <input type="correo" name="correo" id="correo" value="<%= dato.correo%>">
+            </div>
+            <button type="submit" class="btn btn-success">ENVIAR</button>
+        </form>
+    </div>
+</div>
+
+<%- include("./template/footer")%>

@@ -19,11 +19,15 @@
     <tbody class="">
         <% usuarios.forEach(usuario =>{ %>
         <tr>
-            <td><%= usuario.id%></td>
+            <td><%= usuario._id%></td>
             <td><%= usuario.nombre%></td>
             <td><%= usuario.usuario%></td>
             <td><%= usuario.correo%></td>
-            <td><a href="/ver/<%= usuario.id%>"><button type="button" class="btn btn-dark">Ver</button></a></td>
+            <td>
+                <a href="/ver/<%= usuario._id%>"><button type="button" class="btn btn-dark">Ver</button></a>
+                <a href="/modificar/<%= usuario._id%>"><button type="button" class="btn btn-light">Modificar</button></a>
+                <a href="/eliminar/<%= usuario._id%>"><button type="button" class="btn btn-danger">Eliminar</button></a>
+            </td>
         </tr>
         <% })%>
     </tbody>

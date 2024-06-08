@@ -5,7 +5,6 @@ db_conn()
 
 const procesarFormulario = async (req, res) => {
     try {
-        console.log(req.body)
         if(req.body.nombre != undefined && req.body.usuario != undefined && req.body.correo != undefined){
             const datos =  new Usuarios(req.body)
             await datos.save()
