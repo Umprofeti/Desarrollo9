@@ -1,0 +1,29 @@
+<%- include("./template/header")%>
+<%- include("./template/navbar")%>
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center">
+        <img class="w-full h-auto" src="https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <form class="bg-white absolute p-8 rounded shadow-md w-96" method="post" action="/iniciarSesion"> 
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Correo Electrónico
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="correo" type="email" placeholder="Correo Electrónico">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                    Contraseña
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="password" type="password" placeholder="Contraseña">
+            </div>
+            <div class="flex items-center justify-center">
+                <button class="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600 focus:outline-none focus:shadow-outline" type="submit">
+                    Enviar...
+                </button>
+            </div>
+            <div class="mt-3">
+                <p class="text-center">¿No tienes cuenta? <a class="hover:text-orange-500" href="/registro">Registrate aquí</a></p>
+            </div>
+        </form>
+    </main>
+<%- include("./template/footer")%>
