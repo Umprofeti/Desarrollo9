@@ -1,0 +1,12 @@
+<%- include("./template/dashboard_header")%>
+<%- include("./template/dashboard_navbar")%>
+
+<main class="flex flex-col justify-center items-center my-6 h-[100vh]">
+    <h3 class="text-3xl text-center font-Krylon text-gray-700">Listado de todas las obras en la web</h3>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <% datos.data.forEach(data => {%>
+            <%- include("./template/card", {title:data.name, url:data.image, details:(`/arte/${data._id}`)})%>
+        <% })%>
+    </section>
+</main>
+<%- include("./template/dashboard_footer")%>

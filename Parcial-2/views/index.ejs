@@ -10,32 +10,17 @@
             </div>
         </section>
          <!-- Gallery Section -->
-        <section class="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Romanticismo -->
-            <div class="bg-white p-4 shadow-lg">
-                <h2 class="text-xl mb-2">Romanticismo</h2>
-                <div class="bg-gray-300 h-48 mb-4 flex items-center justify-center">
-                    <span class="text-gray-700">Add text</span>
-                </div>
-                <button class="bg-orange-500 text-black py-2 px-4 w-full rounded hover:bg-orange-600">Button</button>
-            </div>
-            <!-- Abstracto -->
-            <div class="bg-white p-4 shadow-lg">
-                <h2 class="text-xl mb-2">Abstracto</h2>
-                <div class="bg-black h-48 mb-4 flex items-center justify-center"></div>
-                <button class="bg-orange-500 text-black py-2 px-4 w-full rounded hover:bg-orange-600">Button</button>
-            </div>
-            <!-- Impresionismo -->
-            <div class="bg-white p-4 shadow-lg">
-                <h2 class="text-xl mb-2">Impresionismo</h2>
-                <div class="bg-gray-300 h-48 mb-4 flex items-center justify-center"></div>
-                <button class="bg-orange-500 text-black py-2 px-4 w-full rounded hover:bg-orange-600">Button</button>
-            </div>
-            <!-- Surrealismo -->
-            <div class="bg-white p-4 shadow-lg">
-                <h2 class="text-xl mb-2">Surrealismo</h2>
-                <div class="bg-black h-48 mb-4 flex items-center justify-center"></div>
-                <button class="bg-orange-500 text-black py-2 px-4 w-full rounded hover:bg-orange-600">Button</button>
+        <section class="max-w-6xl mx-auto p-4 flex flex-col gap-6">
+            <h2 class="text-4xl font-Krylon text-gray-700">¡Explora nuestras colecciones!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Romanticismo -->
+                <%- include("./template/card", {title: "ROMANTICISMO", details:"/category/romanticismo" ,url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.hisour.com%2Fwp-content%2Fuploads%2F2018%2F07%2FLate-French-romanticism.jpg%3Ffit%3D960%252C640%26ssl%3D1&f=1&nofb=1&ipt=3876a2b8548dc2a7e671cc09ce24645d093a2662f7682030601c9512add74854&ipo=images"})%>
+                <!-- Abstracto -->
+                <%- include("./template/card", {title: "ABSTRACTO", details:"/category/abstracto" ,url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F023954_56dac7d1b8e14c78851050d7d9700105~mv2.jpg%2Fv1%2Ffit%2Fw_791%252Ch_520%252Cal_c%252Cq_80%2Ffile.jpg&f=1&nofb=1&ipt=d6bb1b3c38c5b4f24768e30edad4ec625255efe93c42aba95481e24b67623bea&ipo=images"})%>
+                <!-- Impresionismo -->
+                <%- include("./template/card", {title: "IMPRESIONISMO", details:"/category/impresionismo" ,url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ifema.es%2Fimg%2Fxl%2Farte-impresionista%2Fpost-impressionist-1428129_1920.jpg&f=1&nofb=1&ipt=089f7ac480c90d6a407028e0ea0098d0bc435454063542d1928d7052a89e95e5&ipo=images"})%>
+                <!-- Surrealismo -->
+                <%- include("./template/card", {title: "SURREALISMO", details:"/category/surrealismo" ,url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.recreoviral.com%2Fwp-content%2Fuploads%2F2016%2F09%2FIlustraciones-surrealistas-10.jpg&f=1&nofb=1&ipt=e2f7baf7694d91ccd94e6b308857181a9976ec663220b19d1791b54f45bd5507&ipo=images"})%>
             </div>
         </section>
     </main>

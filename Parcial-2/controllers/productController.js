@@ -14,4 +14,22 @@ const procesarArticulo = async (req, res) => {
     }
 }
 
-module.exports = {procesarArticulo}
+const listarArticulos = async(req, res) => {
+    try {
+        const datos =  await Product.find()
+        res.status(200).send(datos)
+    } catch (error) {
+        res.status(500).send({message: "Ha ocurrido un error a la hora de Buscar los registros de Productos"})
+    }
+}
+
+const listarPorCategoria = async (req, res) => {
+    try {
+        const products = await Product.find({ category: req.params.category });
+        res.status(200).send(products);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
+
+module.exports = {procesarArticulo, listarArticulos, listarPorCategoria}

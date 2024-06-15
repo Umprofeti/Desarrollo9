@@ -1,10 +1,11 @@
 const express = require("express")
 const router = express.Router()
-const { getIndex, getLogin, getRegistro, postProcesar, postIniciarSesión, getDashboard, getAgregar, postAgregar} = require("../controllers/sitiocontroller")
+const { getIndex, getCategoryArte ,getListadoObras,getLogin, getRegistro, postProcesar, postIniciarSesión, getDashboard, getAgregar, postAgregar} = require("../controllers/sitiocontroller")
 const autenticate = require("../middleware/authenticate")
 
 const initRenderRoutes = () => {
     router.get("/", getIndex)
+    router.get("/category/:category", getCategoryArte)
     router.get("/login", getLogin)
     router.get("/registro", getRegistro)
     router.get("/categoria/:nombre")
@@ -13,6 +14,7 @@ const initRenderRoutes = () => {
     router.get("/dashboard", autenticate, getDashboard)
     router.get("/dashboard/agregar", autenticate, getAgregar)
     router.post("/dashboard/agregar", autenticate, postAgregar)
+    router.get("/dashboard/listar", autenticate,getListadoObras)
     
     return router
 }

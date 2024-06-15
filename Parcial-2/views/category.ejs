@@ -1,0 +1,14 @@
+<%- include("./template/header")%>
+<%- include("./template/navbar")%>
+
+<main class="flex flex-col gap-3 py-4 mt-6 px-3">
+    <h3 class="text-center text-4xl font-Krylon text-gray-700">Categoría: <%= category%></h3>
+    <% console.log(datos.data)%>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 px-5">
+        <% datos.data.forEach(data => {%>
+            <%- include("./template/card_2", {title:data.name, description: data.description, price:data.price, url:data.image, details:(`/arte/${data._id}`)})%>
+        <% })%>
+    </section>
+</main>
+
+<%- include("./template/footer")%>
